@@ -66,7 +66,8 @@ li a {
   border-radius: 90px;
 }*/
 
-.menu-toggle {
+.menu-toggle,
+.form-toggle {
   width: 4rem;
   height: 3.2rem;
   background: white;
@@ -77,21 +78,27 @@ li a {
   cursor: pointer;
   display: none;
 }
-.menu-toggle:hover .bar {
+.menu-toggle:hover .bar,
+.form-toggle:hover .bar {
   width: 25px;
 }
-.menu-toggle.closeMenu .bar {
+.menu-toggle.closeMenu .bar,
+.form-toggle.closeMenu .bar {
   width: 25px;
 }
-.menu-toggle.closeMenu .bar:first-child {
+.menu-toggle.closeMenu .bar:first-child,
+.form-toggle.closeMenu .bar:first-child {
   -webkit-transform: translateY(7px) rotate(45deg);
           transform: translateY(7px) rotate(45deg);
 }
-.menu-toggle.closeMenu .bar:nth-child(2) {
+.menu-toggle.closeMenu .bar:nth-child(2),
+.form-toggle.closeMenu .bar:nth-child(2) {
   -webkit-transform: scale(0);
           transform: scale(0);
 }
-.menu-toggle.closeMenu .bar:last-child {
+.menu-toggle.closeMenu .bar:last-child,
+.form-toggle.closeMenu .bar:last-child
+ {
   -webkit-transform: translateY(-7px) rotate(-45deg);
           transform: translateY(-7px) rotate(-45deg);
 }
@@ -111,7 +118,8 @@ li a {
 }
 /*** Responsive Menu For Smaller Device ***/
 @media screen and (max-width: 767px) {
-  .menu-toggle {
+  .menu-toggle,
+  .form-toggle {
     display: flex;
   }
 
@@ -168,7 +176,7 @@ li a {
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  padding: 1rem 0 1rem;
+  padding: .4rem 0;
   background-color: rgb(70, 70, 70);
   border-top: 1px solid rgb(0,0,0);
 }
@@ -202,11 +210,14 @@ li a {
   }
 }
 .toTop:hover, .toTop:active,
-#menu-toggle:hover, #menu-toggle:active,
+.menu-toggle:hover, .menu-toggle:active,
 .icon-comment:hover, .icon-comment:active{
-    color: #fff;
-    background: rgb(238, 57, 57);
-    text-decoration: none;
+  color: #fff;
+  background: rgb(238, 57, 57);
+  text-decoration: none;
+}
+.menu-toggle:hover .bar, .menu-toggle:active .bar {
+  background: #fff;
 }
 /*.menu-toggle:hover .bar {
     width: 25px;
@@ -234,7 +245,7 @@ li a {
   .form__text{
     display: none;
   }
-  .form .menu-icon {
+  .form-toggle .menu-icon {
     display: none;
   }
   .closeMenu .menu-icon {
