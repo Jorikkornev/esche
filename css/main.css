@@ -494,3 +494,7 @@ a.links__icon-link_white:focus {
 .section text
 */
 /*contacts end*/
+/*Form*/
+.form-container {
+	display: none;
+}

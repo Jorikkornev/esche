@@ -1,3 +1,4 @@
+    
 /*** Navigation Styles ***/
 .nav-content {
   position: relative;
@@ -19,18 +20,15 @@
 /*nav.navShadow #word-mark {
   opacity: 0;
 }
-
 #brand,
 #menu,
 ul {
   display: flex;
   align-items: center;
 }
-
 #brand {
   padding-left: 40px;
 }
-
 #logo {
   width: 55px;
   height: 55px;
@@ -38,7 +36,6 @@ ul {
   border-radius: 50%;
   cursor: pointer;
 }
-
 #word-mark {
   width: 120px;
   height: 20px;
@@ -48,13 +45,11 @@ ul {
   opacity: 1;
   transition: all 0.3s;
 }
-
 /*** Menu Styles ***/
 /*#menu {
   justify-content: flex-end;
   padding-right: 40px;
 }
-
 li {
   margin-left: 20px;
 }
@@ -123,16 +118,17 @@ li a {
     display: flex;
   }
 
-  nav ul {
+  nav ul,.form-container.showMenu {
     display: inline-block;
-    width: 100vw;
+    width: 100%;
     height: 0;
-    background: #79edfc;
     position: fixed;
-    bottom: 5.25rem;
+    bottom: 4.05rem;
     box-shadow: 0 5px 30px -4px rgba(0, 0, 0, 0.2);
   }
-  ul.showMenu {
+  ul.showMenu, 
+  .form-container.showMenu {
+    display: flex;
     height: auto;
     flex-direction: column;
     align-items: center;
@@ -258,4 +254,42 @@ li a {
 
 
 /*Form*/
+.form-container {
+  width: 100%;
+  color: #fff;
+  z-index: 9;
+}
+.message-form {
+    width: 100%;
+}
+.message-form--body-input,
+.message-form--body-input-textarea {
+  margin-bottom: 30px;
+}
+.message-form--body-input input,
+.message-form--body-input-textarea textarea{
+  outline: none;
+  border: none;
+  color: #fff !important;
+  background: #3b3b3b;
+  padding: .75rem 1.25rem;
+  width: 90%;
+  line-height: 2;
+}
+.message-form--btn {
+  margin-bottom: .5rem;
+}
+.btn {
+  padding: 1rem 2rem;
+    display: inline-block;
+    font-size: 1.25rem;
+    background: #ee3939;
+}
+.btn:hover,
+.btn:active,
+.btn:focus {
+  background: rgb(47,47,47);
+}
+
 /**/
+
