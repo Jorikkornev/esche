@@ -28,7 +28,7 @@
 	            		</h1>
 	            	</div>
 	            	<div class="col-sm-6 col-lg-6 nav-mobile">
-	            		<div class="mobile-menu">
+						<div class="mobile-menu">
 	            		<!-- Form Button -->    
 						    <div class="form">
 						    	<!-- test -->
@@ -53,7 +53,7 @@
 						    </div>
 
 					    <!-- toTop Button -->
-					    <span class="toTop icon-up-open"></span>
+					    <span class="toTop icon-up-open" style="opacity: 1;"></span>
 	            		</div>
 	            		<nav>
 							<ul class="sf-menu text-left">
@@ -338,15 +338,6 @@
 	    <footer class="base-style base-color-gray">
 		    <div class="container-fluid">
 		       <div class="row align-items-center">
-		       		<div class="contact col-md-12 col-lg-6 col-no-gutters">
-				    	<div class="map">
-					        <div class="ymap-container">
-						        <div class="loader-btn btn-visible btn"><span class="links__icon"><i class="icon-location"></i>Показать на карте</span></div>
-						        <div class="loader loader-default"></div>
-						        <div id="map-yandex"></div>
-					        </div>
-			    		</div>
-	            	</div>
 		            <div class="contact col-md-12 col-lg-6">
 			            <h2 class="section-text-block__header">Контакты</h2>
 			            <address>
@@ -386,30 +377,39 @@
 				            </div>
 		                </address>
 		            </div>
+		            <div class="contact col-md-12 col-lg-6 col-no-gutters">
+				    	<div class="map">
+					        <div class="ymap-container">
+						        <div class="loader-btn btn-visible btn"><span class="links__icon"><i class="icon-location"></i>Показать на карте</span></div>
+						        <div class="loader loader-default"></div>
+						        <div id="map-yandex"></div>
+					        </div>
+			    		</div>
+	            	</div>
 	          	</div>
 	        </div>
 	    </footer>
 	    <!-- Form -->
 	    <div class="form-container">
-                    <form id="bookingForm" class="booking-form">
-                        <div class="cntr">
-                        	<div class="form-header">
+                    <form id="messageForm" class="message-form">
+                        <div class="message-form--body">
+                        	<div class="message-form--body-header">
                         		<p>Напишите нам</p>
                         	</div>
-                            <div class="controlHolder"><div class="tmInput">
+                            <div class="message-form--body-input">
                                 <input name="Name" placeholder="Ваше имя:" type="text">
-                            </div></div>
+                            </div>
 
-                            <div class="controlHolder"><div class="tmInput">
+                            <div class="message-form--body-input">
                                 <input name="email" placeholder="Обратная связь:" type="text">
-                            </div></div>
+                            </div>
 
-                            <div class="controlHolder"><div class="tmTextarea">
+                            <div class="message-form--body-input-textarea">
                                 <textarea name="message" placeholder="Сообщение:"></textarea>
-                            </div></div>
+                            </div>
                         </div>
 
-                        <div class="btn-wr c-resize">
+                        <div class="message-form--btn">
                             <a href="#" class="btn" data-type="submit"><span>Написать</span></a>
                         </div>
                         
