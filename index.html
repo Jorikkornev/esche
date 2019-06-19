@@ -30,7 +30,7 @@
 	            	<div class="col-sm-6 col-lg-6 nav-mobile">
 						<div class="mobile-menu">
 	            		<!-- Form Button -->    
-						    <div class="form">
+						    <div class="form-label">
 						    	<!-- test -->
 						    	<div class="form-toggle">
 							        <div class="menu-icon">
@@ -39,8 +39,8 @@
 							          <div class="bar"></div>
 							        </div>
 							    <span class="form__icon icon-comment"></span>    
-								</div>
 								
+								</div>
 								<span class="form__text">Напишите нам</span>
 							</div>
 	            		<!-- Menu Button -->
@@ -53,7 +53,7 @@
 						    </div>
 
 					    <!-- toTop Button -->
-					    <span class="toTop icon-up-open" style="opacity: 1;"></span>
+					    <span class="toTop icon-up-open"></span>
 	            		</div>
 	            		<nav>
 							<ul class="sf-menu text-left">
@@ -293,13 +293,13 @@
 				<div class="container-fluid no-padding">
 					<!-- Блок с событиями -->
 					<div class="row no-gutters">
-						<div class="box-item col-sm-12 offset-md-5 col-md-7 col-lg-12">
+						<div class="box-item event col-sm-12 col-md-7 col-lg-12">
 							<div class="section-block__image image-left">
 								<img src="images/static/page-1_img04.jpg" alt="">
 							</div>
 							<div class="servises-text section-text-block__text base-color-light-gray">
-	                        	<div class="section-text-block__header_x--3">
-	                        		<div class="date">18.06.2019</div>
+	                        	<div class="section-text-block__header now">
+	                        		<div class="date">Сегодня</div>
 	                        	</div>
 	                        	<div class="section-text-block__header_x--3">
 	                        		<h3>Вечер "классического рока"</h3>
@@ -311,17 +311,19 @@
 							</div>
 						</div>
 					</div>
+					<!-- Блок с событиями -->
+					<!-- Блок с событиями -->
 					<div class="row no-gutters">
-						<div class="box-item col-sm-12 offset-md-5 col-md-7 col-lg-12">
-							<div class="section-block__image image-left">
+						<div class="box-item event col-sm-12 offset-md-5 col-md-7 col-lg-12">
+							<div class="section-block__image image-right order-lg-2">
 								<img src="images/static/page-1_img04.jpg" alt="">
 							</div>
-							<div class="servises-text section-text-block__text base-color-light-gray">
-	                        	<div class="section-text-block__header_x--3">
-	                        		<div class="date">18.06.2019</div>
+							<div class="servises-text section-text-block__text base-color-light-gray order-lg-1">
+	                        	<div class="section-text-block__header later">
+	                        		<div class="date">22.06.2019</div>
 	                        	</div>
 	                        	<div class="section-text-block__header_x--3">
-	                        		<h3>Вечер "классического рока"</h3>
+	                        		<h3>Скидка на кальян 30%</h3>
 	                        	</div>
 	                        	<p> Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut
 	            		        	labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
@@ -330,7 +332,7 @@
 							</div>
 						</div>
 					</div>
-				<!-- Блок с событиями -->
+					<!-- Блок с событиями -->
 				</div>
 			</section>
 			<!-- События черновик -->
@@ -480,7 +482,7 @@
 			$('.form-toggle').on('click', () => {
 				$('.form-toggle').toggleClass('closeMenu');
 				$('.form-container').toggleClass('showMenu');
-				
+				$('.mobile-menu').toggleClass('showCloseMenu');
 
 				/*$('li').on('click', () => {
 					$('.sf-menu').removeClass('showMenu');
