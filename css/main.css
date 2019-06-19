@@ -281,7 +281,25 @@ section text
   	background-repeat: no-repeat;
 	background-size: cover;
 }
-/* !!!!!!!! разобраться с offset!!!!!!!! и pallarax css3 !!!!!!!!!!!!!!!
+.great {
+	background-image: url("../images/parallax/parallax2.jpg");
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 9rem 0 12.625rem;
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	-o-filter: grayscale(100%);
+	-ms-filter: grayscale(100%);
+	filter: grayscale(100%);
+}
+@media screen and (max-width: 576px){
+	.great, .what {
+		background-attachment: inherit;
+	}
+}
+/* !!!!!!!! разобраться с offset!!!!!!!! и parallarax css3 !!!!!!!!!!!!!!!
 /**
 section text
 */
@@ -306,7 +324,8 @@ section text
 a.section-block__text-link_red,
 a.section-block__text-link_white {
 	font-size: 1.5rem;
-    padding: 1.8125rem 0;
+	display: inline-block;
+    padding: .5rem 0;
     text-decoration: underline;
 }
 a.section-block__text-link_red {
@@ -392,6 +411,7 @@ a.section-block__text-link_white:focus {
 		margin: -72px 0;
 	}
 }
+/*Блок мероприятия */
 
 /**
 section text
@@ -403,20 +423,30 @@ section text
 /**
 section text
 */
-@media screen and (max-width: 576px){
-		.great {
-		background-image: url("../images/parallax/parallax2.jpg");
-		background-attachment: fixed;
-	  	background-position: center;
-	  	background-repeat: no-repeat;
-		background-size: cover;
-		padding: 9rem 0 12.625rem;
-		-webkit-filter: grayscale(100%);
-	  	-moz-filter: grayscale(100%);
-	  	-o-filter: grayscale(100%);
-	  	-ms-filter: grayscale(100%);
-	  	filter: grayscale(100%);
+
+/*Блок мероприятия */
+
+.event .servises-text {
+	padding-top: 0px;
+    padding-bottom: 1rem;
+}
+.event .section-text-block__header {
+	
+    padding: 1rem 0;
+    margin: -2rem 0 1rem;
+    font-size: 1.25rem;
+}
+@media screen and (max-width: 992px) {
+	.event .section-text-block__header {
+		margin: 0;
+		margin-bottom: 1rem;
 	}
+}
+.event .now {
+	background-color: rgb(238, 57, 57);
+}
+.event .later {
+	background-color: rgb(46, 46, 46);
 }
 
 /**

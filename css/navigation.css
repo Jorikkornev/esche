@@ -71,6 +71,9 @@ li a {
   align-items: center;
   border-radius: 5%;
   cursor: pointer;
+
+}
+.menu-toggle{
   display: none;
 }
 .menu-toggle:hover .bar,
@@ -165,7 +168,8 @@ li a {
 
 }
 /*Все, что меню касается...*/
-.mobile-menu {
+
+  .mobile-menu {
   position:fixed;
   bottom: 0;
   display: flex;
@@ -176,6 +180,8 @@ li a {
   background-color: rgb(70, 70, 70);
   border-top: 1px solid rgb(0,0,0);
 }
+
+
 .nav-mobile {
   padding-left: 0px;
 }
@@ -197,14 +203,20 @@ li a {
   cursor: pointer;
     /* opacity: 0; */
 }
-@media screen and (min-width: 576px){
+.toTop {
+    position: fixed;
+    right: 2rem;
+    bottom: 4rem;
+}
+@media screen and (max-width: 576px){
   /* toTop Button */
   .toTop {
-    position: absolute;
-    right: 66px;
-    bottom: 160px;
+    position: static;
+    right: 0;
+    bottom: 0;
   }
 }
+
 .toTop:hover, .toTop:active,
 .menu-toggle:hover, .menu-toggle:active,
 .icon-comment:hover, .icon-comment:active{
@@ -237,9 +249,77 @@ li a {
     display: inline-block;
     cursor: pointer;
 }
+/*Всплывашка формы на большом экране*/
+  @media screen and (min-width: 758px){
+    .mobile-menu {
+      position: fixed;
+      bottom: 35%;
+      left: 0;
+      width: auto;
+      border: none;
+      padding-top: 0;
+      padding-bottom: 1rem;
+    }
+    .mobile-menu.showCloseMenu {
+      left: 75%;
+      position: fixed;
+      bottom: 57%;
+      margin-left: -3.1rem;
+      width: auto;
+      padding: 0;
+    }
+    .form-label{
+    display: flex;
+    width: 3.2rem;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    }
+    .showCloseMenu .form__text {
+      display: none;
+    }
+    .form-toggle {
+    margin-bottom: 1rem;
+    width: 3.2rem;
+    }
+    .form-toggle.closeMenu {
+      margin-bottom: 0;
+      width: 3.2rem;
+    }
+    .form-container.showMenu {
+      display: flex;
+      width: 50%;
+      position: fixed;
+      top: 40%;
+      left: 25%;
+      background: rgb(25,25,25);
+      padding: 0;
+    }
+  }
+
+
+
+  .form-toggle .menu-icon {
+    display: none;
+  }
+  .closeMenu .form__icon {
+    display: none;
+  }
+  .closeMenu .menu-icon {
+    display: inline-block;
+  }
+  .form__text {
+    writing-mode: tb-rl;
+    transform: rotate(180deg);
+    font-size: 1.25rem;
+
+}
 @media screen and (max-width: 576px){
   .form__text{
     display: none;
+  }
+  .form-toggle {
+    margin-bottom: 0;
   }
   .form-toggle .menu-icon {
     display: none;
@@ -261,6 +341,10 @@ li a {
 }
 .message-form {
     width: 100%;
+}
+.message-form--body-header {
+  font-size: 1.25rem;
+  padding: .5rem 0;
 }
 .message-form--body-input,
 .message-form--body-input-textarea {
