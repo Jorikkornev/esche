@@ -59,6 +59,7 @@
 @media screen and (max-width:992px) {
 	.sf-menu a {
 		font-size: 1.25em;
+		padding: 1.25em 0;
 	}
 }
 .navShadow .sf-menu a {

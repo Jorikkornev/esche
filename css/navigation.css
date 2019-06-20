@@ -3,7 +3,10 @@
 .nav-content {
   position: relative;
   z-index: 10;
-  /*transition: all 0.3s;*/
+  padding: .625rem 0;
+  background-color: rgba(70, 70, 70, 1);
+
+  transition: all 0.3s;
 }
 .nav-content .row {
   align-items: center;
@@ -13,8 +16,7 @@
   /*height: 100px;*/
   position: fixed;
   width: 100%;
-  padding: .625rem 0;
-  background-color: rgb(70, 70, 70);
+  background-color: rgba(70, 70, 70, .95);
   border-bottom: 1px solid rgb(0,0,0);
 }
 /*nav.navShadow #word-mark {
@@ -115,7 +117,7 @@ li a {
   width: 15px;
 }
 /*** Responsive Menu For Smaller Device ***/
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .menu-toggle,
   .form-toggle {
     display: flex;
@@ -138,6 +140,9 @@ li a {
     background-color: rgb(70, 70, 70);
     border-top: 1px solid rgb(0,0,0);
     padding: .5rem 0;
+  }
+  ul.showMenu {
+    left:0;
   }
   ul.showMenu li {
     height: 80px;
@@ -167,17 +172,29 @@ li a {
   }
 
 }
+@media screen and (orientation: landscape) and (max-width: 768px) {
+  ul.showMenu {
+    height: 75%;
+    overflow: auto;
+  }
+  .form-container.showMenu {
+    height: 75%;
+    overflow: auto;
+    z-index: 12;
+  }
+}
 /*Все, что меню касается...*/
 
   .mobile-menu {
   position:fixed;
   bottom: 0;
+  left: 0;
   display: flex;
   justify-content: space-around;
   align-items: center;
   width: 100%;
   padding: .4rem 0;
-  background-color: rgb(70, 70, 70);
+  background-color: rgba(70, 70, 70, .95);
   border-top: 1px solid rgb(0,0,0);
 }
 
@@ -208,7 +225,7 @@ li a {
     right: 2rem;
     bottom: 4rem;
 }
-@media screen and (max-width: 576px){
+@media screen and (max-width: 768px){
   /* toTop Button */
   .toTop {
     position: static;
@@ -250,7 +267,7 @@ li a {
     cursor: pointer;
 }
 /*Всплывашка формы на большом экране*/
-  @media screen and (min-width: 758px){
+  @media screen and (min-width: 769px){
     .mobile-menu {
       position: fixed;
       bottom: 35%;
@@ -314,7 +331,7 @@ li a {
     font-size: 1.25rem;
 
 }
-@media screen and (max-width: 576px){
+@media screen and (max-width: 768px){
   .form__text{
     display: none;
   }

@@ -142,6 +142,8 @@ h1.brand  {
 }
 .brand img {
 	padding-right: 1rem;
+	height: 3rem;
+    filter: invert(100%);
 }
 .quotes:before {
 	content:"\201C";
@@ -165,8 +167,12 @@ h1.brand  {
 		font-size: 2rem;
 	}
 }
-@media screen and (max-width:576px) {
+@media screen and (max-width:768px) {
 	.brand {
+		font-size: 1.25rem;
+	}
+	.brand img {
+		height: 3rem;
 	}
 }
 
