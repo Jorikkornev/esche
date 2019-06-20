@@ -52,7 +52,7 @@
 	border-top: 1px solid #dFeEFF; /* fallback colour must use full shorthand */
 	/*border-top: 1px solid rgba(255,255,255,.5);*/
 	font-size: 1.5em;
-	padding: 2.25em 0;
+	padding: 1.25em 0;
 	text-decoration: none;
 	zoom: 1; /* IE7 */
 }
